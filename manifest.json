@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Profile Picture Changer",
+    "version": "1.0",
+    "description": "Changes the profile pictures of all posts on the LinkedIn homepage",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["https://www.linkedin.com/*"],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
+  
